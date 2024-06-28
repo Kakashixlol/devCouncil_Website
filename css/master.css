@@ -1,0 +1,110 @@
+:root {
+    --main-color: #333;
+    --secondary-color: #00BCD4;
+}
+body {
+    font-family: "Cairo", sans-serif;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3 {
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+.page {
+    direction: rtl;
+    overflow-x: hidden;
+}
+/* Start Header */
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--main-color);
+    height: 70px;
+    border-bottom: 5px solid #ddd;
+}
+.header h1 {
+    color: white;
+    font-size: 28px;
+}
+.header .nav {
+    filter: none;
+    display: flex;
+    width: 400px;
+    justify-content: center;
+}
+.header .nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+}
+.header .nav ul li a {
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.header .nav ul li a:hover {
+    color: var(--secondary-color);
+}
+.header .whatsapp-btn {
+    padding: 5px 15px;
+    background-color: #12cc76;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 120px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.header .whatsapp-btn a {
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.header .whatsapp-btn i {
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+.header .whatsapp-btn:hover {
+    background-color: white;
+}
+.header .whatsapp-btn:hover a, 
+.header .whatsapp-btn:hover i {
+    color: var(--main-color);
+}
+/* End Header */
+/* Start Landing */
+.landing {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--main-color);
+    height: calc(100vh - 70px);
+}
+.landing .content h2 {
+    height: fit-content;
+    color: white;
+}
+.landing .image {
+    overflow-y: hidden;
+    position: relative;
+    left: -200px;
+}
+.landing .image img {
+    width: 400px;
+}
+/* End Landing */
