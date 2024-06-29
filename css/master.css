@@ -1,5 +1,5 @@
 :root {
-    --main-color: #333;
+    --main-color: #1a2a3d;
     --secondary-color: #00BCD4;
 }
 body {
@@ -33,7 +33,7 @@ li {
     align-items: center;
     background-color: var(--main-color);
     height: 70px;
-    border-bottom: 5px solid #ddd;
+    /* box-shadow: 0 0 30px #34b0d0; */
 }
 .header h1 {
     color: white;
@@ -58,53 +58,81 @@ li {
 .header .nav ul li a:hover {
     color: var(--secondary-color);
 }
-.header .whatsapp-btn {
-    padding: 5px 15px;
-    background-color: #12cc76;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 120px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-.header .whatsapp-btn a {
+/* .header .whatsapp-btn a {
     color: white;
     font-weight: bold;
     transition: 0.3s;
+}
+*/
+.header .whatsapp-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
 }
 .header .whatsapp-btn i {
     color: white;
-    font-size: 20px;
+    font-size: 28px;
     transition: 0.3s;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
-.header .whatsapp-btn:hover {
-    background-color: white;
-}
-.header .whatsapp-btn:hover a, 
-.header .whatsapp-btn:hover i {
-    color: var(--main-color);
-}
+
 /* End Header */
 /* Start Landing */
 .landing {
-    display: flex;
-    justify-content: space-around;
-    background-color: var(--main-color);
-    height: calc(100vh - 70px);
-}
-.landing .content h2 {
-    height: fit-content;
-    color: white;
+    background-image: linear-gradient(to bottom, var(--main-color), #602c91);
+    height: 537px;
+    /* z-index: -1; */
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 550px;
+    overflow-y: hidden;
 }
 .landing .image {
-    overflow-y: hidden;
-    position: relative;
-    left: -200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .landing .image img {
-    width: 400px;
+    width: 310px;
+    animation-name: up-and-down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0, 0, 0.55, 0.47);
+    z-index: 2;
+}
+.landing .image .purple {
+    width: 300px;
+    position: absolute;
+    z-index: 1;
+    left: 387px;
+}
+.landing .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.landing .content h2 {
+    font-size: 50px;
+    width: 227px;
+    color: white;
+}
+.landing .image .center {
+    /* display: flex; */
+}
+@keyframes up-and-down {
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    75% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 /* End Landing */
