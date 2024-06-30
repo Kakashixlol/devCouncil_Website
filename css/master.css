@@ -75,12 +75,20 @@ li {
     font-size: 28px;
     transition: 0.3s;
     /* font-weight: bold; */
+    cursor: pointer;
+}
+.header .whatsapp-btn i:hover {
+    color: #98ffa5;
 }
 
 /* End Header */
 /* Start Landing */
 .landing {
     background-image: linear-gradient(to bottom, var(--main-color), #602c91);
+    /* background-image: url(../imgs/Computer.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
     height: 537px;
     /* z-index: -1; */
     position: relative;
